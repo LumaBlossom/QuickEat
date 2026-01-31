@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "quickeat",
+  "version": "${version}",
+  "name": "QuickEat",
+  "description": "Auto-eat food with a keybind! Includes hotbar slot switching, inventory food grabbing, and anti-cheat protection.",
+  "authors": ["LumaBlossom"],
+  "contact": {
+    "homepage": "https://modrinth.com/organization/Luma",
+    "sources": "https://github.com/LumaBlossom/QuickEat"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/quickeat/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["luma.blossom.QuickEat"],
+    "client": ["luma.blossom.QuickEatClient"],
+    "modmenu": ["luma.blossom.QuickEatModMenu"]
+  },
+  "mixins": [
+    "quickeat.mixins.json",
+    {
+      "config": "quickeat.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.2",
+    "minecraft": ">=1.20 <1.21",
+    "java": ">=17",
+    "fabric-api": "*",
+    "cloth-config": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}

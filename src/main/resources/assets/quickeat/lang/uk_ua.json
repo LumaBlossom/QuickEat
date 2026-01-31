@@ -1,0 +1,42 @@
+{
+  "key.quickeat.eat": "Швидка Їжа",
+  "category.quickeat.main": "QuickEat",
+  
+  "config.quickeat.title": "Налаштування QuickEat",
+  "config.quickeat.category.general": "Загальне",
+  "config.quickeat.category.anticheat": "Анти-Чіт",
+  "config.quickeat.category.logs": "Логи",
+  
+  "config.quickeat.option.sortMode": "Режим Сортування",
+  "config.quickeat.option.sortMode.tooltip": "Пріоритет насичення або відновлення голоду",
+  "config.quickeat.option.sortMode.saturation": "Насичення",
+  "config.quickeat.option.sortMode.hunger": "Голод",
+  
+  "config.quickeat.option.eatUntilFull": "Їсти до повного",
+  "config.quickeat.option.eatUntilFull.tooltip": "Продовжувати їсти, поки смужка голоду не заповниться",
+  
+  "config.quickeat.option.enableLogs": "Увімкнути Логи",
+  "config.quickeat.option.enableLogs.tooltip": "Головний перемикач повідомлень у рядку дій",
+  
+  "config.quickeat.option.grabFromInventory": "Брати з Інвентарю",
+  "config.quickeat.option.grabFromInventory.tooltip": "Брати їжу з усього інвентарю, а не тільки хотбару",
+  
+  "config.quickeat.option.antiCheatEnabled": "Анти-Чіт",
+  "config.quickeat.option.antiCheatEnabled.tooltip": "Затримка перед їжею для імітації гравця",
+  "config.quickeat.option.stopDuration": "Тривалість паузи (с)",
+  "config.quickeat.option.stopDuration.tooltip": "Скільки чекати перед їжею",
+
+  "config.quickeat.option.logStart": "Лог: Старт",
+  "config.quickeat.option.logStart.tooltip": "Повідомлення при початку їжі",
+  "config.quickeat.option.logEat": "Лог: З'їдено",
+  "config.quickeat.option.logEat.tooltip": "Повідомлення при з'їданні предмета",
+  "config.quickeat.option.logFull": "Лог: Ситість",
+  "config.quickeat.option.logFull.tooltip": "Повідомлення коли ситий або зупинений",
+  "config.quickeat.option.logError": "Лог: Помилки",
+  "config.quickeat.option.logError.tooltip": "Повідомлення про помилки (немає їжі, скасовано)",
+  "config.quickeat.option.logWait": "Лог: Очікування",
+  "config.quickeat.option.logWait.tooltip": "Повідомлення про очікування анти-чіта",
+
+  "config.quickeat.keybind.title": "Кнопка QuickEat",
+  "config.quickeat.keybind.tooltip": "Кнопка для початку їжі"
+}

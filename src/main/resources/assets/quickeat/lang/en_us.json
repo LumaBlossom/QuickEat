@@ -1,0 +1,42 @@
+{
+  "key.quickeat.eat": "Quick Eat",
+  "category.quickeat.main": "QuickEat",
+  
+  "config.quickeat.title": "QuickEat Settings",
+  "config.quickeat.category.general": "General",
+  "config.quickeat.category.anticheat": "Anti-Cheat",
+  "config.quickeat.category.logs": "Logs",
+  
+  "config.quickeat.option.sortMode": "Food Sort Mode",
+  "config.quickeat.option.sortMode.tooltip": "Prioritize by saturation or hunger restoration",
+  "config.quickeat.option.sortMode.saturation": "Saturation",
+  "config.quickeat.option.sortMode.hunger": "Hunger",
+  
+  "config.quickeat.option.eatUntilFull": "Eat Until Full",
+  "config.quickeat.option.eatUntilFull.tooltip": "If enabled, continues eating until hunger bar is full",
+  
+  "config.quickeat.option.enableLogs": "Enable Logs",
+  "config.quickeat.option.enableLogs.tooltip": "Master switch to show/hide messages in action bar",
+  
+  "config.quickeat.option.grabFromInventory": "Grab from Inventory",
+  "config.quickeat.option.grabFromInventory.tooltip": "Allow grabbing food from full inventory, not just hotbar",
+  
+  "config.quickeat.option.antiCheatEnabled": "Anti-Cheat Mode",
+  "config.quickeat.option.antiCheatEnabled.tooltip": "Add delay before eating to appear more human-like",
+  "config.quickeat.option.stopDuration": "Stop Duration (s)",
+  "config.quickeat.option.stopDuration.tooltip": "How long to wait before eating",
+
+  "config.quickeat.option.logStart": "Log Start",
+  "config.quickeat.option.logStart.tooltip": "Show message when eating starts",
+  "config.quickeat.option.logEat": "Log Eat",
+  "config.quickeat.option.logEat.tooltip": "Show message when an item is eaten",
+  "config.quickeat.option.logFull": "Log Full",
+  "config.quickeat.option.logFull.tooltip": "Show message when full or stopped",
+  "config.quickeat.option.logError": "Log Error",
+  "config.quickeat.option.logError.tooltip": "Show error messages (no food, cancelled)",
+  "config.quickeat.option.logWait": "Log Wait",
+  "config.quickeat.option.logWait.tooltip": "Show anti-cheat wait messages",
+
+  "config.quickeat.keybind.title": "QuickEat Key",
+  "config.quickeat.keybind.tooltip": "Key to start eating"
+}

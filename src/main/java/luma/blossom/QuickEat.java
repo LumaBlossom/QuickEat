@@ -1,0 +1,15 @@
+package luma.blossom;
+
+import net.fabricmc.api.ModInitializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class QuickEat implements ModInitializer {
+    public static final String MOD_ID = "quickeat";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+    @Override
+    public void onInitialize() {
+        LOGGER.info("Hello from Luma!");
+    }
+}
