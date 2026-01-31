@@ -1,9 +1,11 @@
 package luma.blossom;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.ArrayList;
@@ -263,9 +265,9 @@ public class QuickEatHandler {
     private void startEatingAction(Minecraft client) {
         if (client.player != null && client.gameMode != null) {
             ItemStack heldItem = client.player.getMainHandItem();
-            var foodProperties = heldItem.getItem().getFoodProperties();
+            FoodProperties foodProperties = heldItem.get(DataComponents.FOOD);
             
-            if (heldItem.isEdible() && foodProperties != null && client.player.canEat(foodProperties.canAlwaysEat())) {
+            if (foodProperties != null && client.player.canEat(foodProperties.canAlwaysEat())) {
                 if (!client.options.keyUse.isDown()) {
                     client.options.keyUse.setDown(true);
                 }
@@ -320,20 +322,19 @@ public class QuickEatHandler {
     }
 
     private boolean isGoodFood(ItemStack stack, Player player) {
-        if (!stack.isEdible()) return false;
-        var props = stack.getItem().getFoodProperties();
+        FoodProperties props = stack.get(DataComponents.FOOD);
         if (props == null) return false;
         return player.canEat(props.canAlwaysEat());
     }
 
     private double getFoodScore(ItemStack stack, QuickEatConfig.SortMode mode) {
-        var props = stack.getItem().getFoodProperties();
+        FoodProperties props = stack.get(DataComponents.FOOD);
         if (props == null) return 0;
         
         if (mode == QuickEatConfig.SortMode.saturation) {
-            return props.getNutrition() * props.getSaturationModifier() * 2.0f;
+            return props.nutrition() * props.saturation() * 2.0f;
         } else {
-            return props.getNutrition();
+            return props.nutrition();
         }
     }
 
