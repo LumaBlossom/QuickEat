@@ -324,6 +324,8 @@ public class QuickEatHandler {
         }
 
         boolean shouldLog = switch (type) {
+            case START -> config.logStart;
+            case EAT -> config.logEat;
             case FULL -> config.logFull;
             case ERROR -> config.logError;
         };
