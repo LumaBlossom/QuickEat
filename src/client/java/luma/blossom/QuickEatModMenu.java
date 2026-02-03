@@ -42,28 +42,7 @@ public class QuickEatModMenu implements ModMenuApi {
                 .setSaveConsumer(newValue -> config.eatUntilFull = newValue)
                 .build());
 
-            general.addEntry(builder.entryBuilder()
-                .startBooleanToggle(Component.translatable("config.quickeat.option.grabFromInventory"), config.grabFromInventory)
-                .setDefaultValue(true)
-                .setTooltip(Component.translatable("config.quickeat.option.grabFromInventory.tooltip"))
-                .setSaveConsumer(newValue -> config.grabFromInventory = newValue)
-                .build());
 
-            ConfigCategory anticheat = builder.getOrCreateCategory(Component.translatable("config.quickeat.category.anticheat"));
-            
-            anticheat.addEntry(builder.entryBuilder()
-                .startBooleanToggle(Component.translatable("config.quickeat.option.antiCheatEnabled"), config.antiCheatEnabled)
-                .setDefaultValue(false)
-                .setTooltip(Component.translatable("config.quickeat.option.antiCheatEnabled.tooltip"))
-                .setSaveConsumer(newValue -> config.antiCheatEnabled = newValue)
-                .build());
-
-            anticheat.addEntry(builder.entryBuilder()
-                .startFloatField(Component.translatable("config.quickeat.option.stopDuration"), config.stopDuration)
-                .setDefaultValue(1.0f)
-                .setTooltip(Component.translatable("config.quickeat.option.stopDuration.tooltip"))
-                .setSaveConsumer(newValue -> config.stopDuration = newValue)
-                .build());
 
             ConfigCategory logs = builder.getOrCreateCategory(Component.translatable("config.quickeat.category.logs"));
 
@@ -100,13 +79,6 @@ public class QuickEatModMenu implements ModMenuApi {
                 .setDefaultValue(true)
                 .setTooltip(Component.translatable("config.quickeat.option.logError.tooltip"))
                 .setSaveConsumer(newValue -> config.logError = newValue)
-                .build());
-
-            logs.addEntry(builder.entryBuilder()
-                .startBooleanToggle(Component.translatable("config.quickeat.option.logWait"), config.logWait)
-                .setDefaultValue(true)
-                .setTooltip(Component.translatable("config.quickeat.option.logWait.tooltip"))
-                .setSaveConsumer(newValue -> config.logWait = newValue)
                 .build());
 
             return builder.build();
