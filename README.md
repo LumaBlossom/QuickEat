@@ -17,15 +17,12 @@ A lightweight and premium client-side Minecraft Fabric mod that automates eating
   - **Saturation Mode**: Prioritizes food that keeps you full longer (e.g., Golden Carrots).
   - **Hunger Mode**: Prioritizes food that restores the most hunger points (e.g., Steak).
 - **Eat until full**: Automatically eats until your hunger bar is full.
-- **Inventory Grabbing**: Automatically pulls food from your main inventory if your hotbar is empty.
-- **Anti-Cheat Mode**: Simulates human behavior with customizable delays and "stop" durations to keep you safe on servers.
 
 ## 🛠️ Configuration
 
 QuickEat is fully configurable via **ModMenu** and **Cloth Config**:
 
 - **General**: Toggle continuous eating, set your sorting preference, and enable/disable hotbar swapping.
-- **Anti-Cheat**: Enable protection and adjust the pause duration before eating starts.
 - **Logs**: A tab to customize exactly what messages appear in your action bar.
 
 ## 🌍 Localizations

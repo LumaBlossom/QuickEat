@@ -24,18 +24,6 @@ public class QuickEatConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean enableLogs = true;
 
-    @ConfigEntry.Category("inventory")
-    @ConfigEntry.Gui.Tooltip
-    public boolean grabFromInventory = true;
-
-    @ConfigEntry.Category("anticheat")
-    @ConfigEntry.Gui.Tooltip
-    public boolean antiCheatEnabled = true;
-
-    @ConfigEntry.Category("anticheat")
-    @ConfigEntry.Gui.Tooltip
-    public float stopDuration = 1.0f;
-
     @ConfigEntry.Category("logs")
     @ConfigEntry.Gui.Tooltip
     public boolean logStart = true;
@@ -51,8 +39,4 @@ public class QuickEatConfig implements ConfigData {
     @ConfigEntry.Category("logs")
     @ConfigEntry.Gui.Tooltip
     public boolean logError = true;
-
-    @ConfigEntry.Category("logs")
-    @ConfigEntry.Gui.Tooltip
-    public boolean logWait = true;
 }
