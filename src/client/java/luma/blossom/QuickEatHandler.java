@@ -26,7 +26,6 @@ public class QuickEatHandler {
 
     public enum EatState {
         IDLE,
-        STOPPING,
         SWITCHING,
         EATING,
         COOLDOWN,
@@ -37,8 +36,7 @@ public class QuickEatHandler {
         START,
         EAT,
         FULL,
-        ERROR,
-        WAIT
+        ERROR
     }
 
     public static QuickEatHandler getInstance() {
@@ -101,15 +99,7 @@ public class QuickEatHandler {
             swappedItems = true;
         }
 
-        QuickEatConfig config = QuickEatClient.getConfig();
-        if (config.antiCheatEnabled && !isChaining) {
-            state = EatState.STOPPING;
-            cooldownTicks = (int)(config.stopDuration * 20);
-            if (cooldownTicks < 1) cooldownTicks = 1;
-            sendMessage(client, "waiting " + String.format("%.1fs", config.stopDuration), LogType.WAIT);
-        } else {
-            proceedToSwitching(client);
-        }
+        proceedToSwitching(client);
     }
 
     public void tick(Minecraft client) {
@@ -119,7 +109,7 @@ public class QuickEatHandler {
 
         Inventory inventory = client.player.getInventory();
         
-        if (state != EatState.RESTORING && state != EatState.STOPPING && state != EatState.COOLDOWN) {
+        if (state != EatState.RESTORING && state != EatState.COOLDOWN) {
             if (inventory.selected != targetHotbarSlot) {
                 sendMessage(client, "cancelled", LogType.ERROR);
                 stopEating(client);
@@ -130,12 +120,7 @@ public class QuickEatHandler {
         }
 
         switch (state) {
-            case STOPPING:
-                cooldownTicks--;
-                if (cooldownTicks <= 0) {
-                    proceedToSwitching(client);
-                }
-                break;
+
             case SWITCHING:
                 handleSwitching(client);
                 break;
@@ -307,12 +292,6 @@ public class QuickEatHandler {
             if (isGoodFood(inventory.getItem(i), player)) validSlots.add(i);
         }
 
-        if (config.grabFromInventory) {
-            for (int i = 9; i < 36; i++) {
-                if (isGoodFood(inventory.getItem(i), player)) validSlots.add(i);
-            }
-        }
-
         if (validSlots.isEmpty()) return -1;
 
         validSlots.sort(Comparator.comparingDouble(slot -> -getFoodScore(inventory.getItem(slot), config.sortMode)));
@@ -345,11 +324,8 @@ public class QuickEatHandler {
         }
 
         boolean shouldLog = switch (type) {
-            case START -> config.logStart;
-            case EAT -> config.logEat;
             case FULL -> config.logFull;
             case ERROR -> config.logError;
-            case WAIT -> config.logWait;
         };
 
         if (!shouldLog) {
@@ -389,8 +365,7 @@ public class QuickEatHandler {
     }
 
     public boolean shouldBlockMovement() {
-        QuickEatConfig config = QuickEatClient.getConfig();
-        return config.antiCheatEnabled && state == EatState.STOPPING;
+        return false;
     }
 }
 

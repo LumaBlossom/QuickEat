@@ -4,7 +4,6 @@
   
   "config.quickeat.title": "Настройки QuickEat",
   "config.quickeat.category.general": "Основное",
-  "config.quickeat.category.anticheat": "Анти-Чит",
   "config.quickeat.category.logs": "Логи",
   
   "config.quickeat.option.sortMode": "Режим Сортировки",
@@ -17,14 +16,6 @@
   
   "config.quickeat.option.enableLogs": "Включить Логи",
   "config.quickeat.option.enableLogs.tooltip": "Главный переключатель сообщений в строке действий",
-  
-  "config.quickeat.option.grabFromInventory": "Брать из Инвентаря",
-  "config.quickeat.option.grabFromInventory.tooltip": "Брать еду из всего инвентаря, а не только хотбара",
-  
-  "config.quickeat.option.antiCheatEnabled": "Анти-Чит",
-  "config.quickeat.option.antiCheatEnabled.tooltip": "Задержка перед едой для имитации игрока",
-  "config.quickeat.option.stopDuration": "Длительность паузы (с)",
-  "config.quickeat.option.stopDuration.tooltip": "Сколько ждать перед едой",
 
   "config.quickeat.option.logStart": "Лог: Старт",
   "config.quickeat.option.logStart.tooltip": "Сообщение при начале еды",
@@ -34,8 +25,6 @@
   "config.quickeat.option.logFull.tooltip": "Сообщение когда сыт или остановлен",
   "config.quickeat.option.logError": "Лог: Ошибки",
   "config.quickeat.option.logError.tooltip": "Сообщения об ошибках (нет еды, отмена)",
-  "config.quickeat.option.logWait": "Лог: Ожидание",
-  "config.quickeat.option.logWait.tooltip": "Сообщение об ожидании анти-чита",
 
   "config.quickeat.keybind.title": "Кнопка QuickEat",
   "config.quickeat.keybind.tooltip": "Кнопка для начала еды"
